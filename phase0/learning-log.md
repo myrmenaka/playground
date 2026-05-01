@@ -41,20 +41,23 @@
 ### 2026-05-01
 
 **今日完了した Step**
-- PHP-W0-S1: PHP 8.4.20 を WSL2 + Ubuntu にインストール済みを確認
-- PHP-W0-S2: Composer 2.9.7 インストール済みを確認
-- PHP-W0-S3: VSCode に PHP Intelephense 拡張をインストール
+- PHP-W0-S1: PHP 8.4.20 を WSL2 + Ubuntu にインストール済み確認
+- PHP-W0-S2: Composer 2.9.7 インストール
+- PHP-W0-S3: VSCode に PHP Intelephense 拡張をインストール(WSL 側に)
 - PHP-W0-S4: 学習用フォルダを WSL 側に移行(C 直下から `~/playground` へ git clone で移行)
-- PHP-W0-S5: `phase0/` フォルダ作成 + `learning-log.md` 作成
+- PHP-W0-S5: `phase0/` フォルダ作成 + `learning-log.md` 作成 + 別 GitHub アカウントでの push 設定
 
 **今日書いたコード(ファイル名 or 概要)**
 - まだコードは書いていない(環境準備のみ)
 
 **詰まった点・気づき**
-- 最初 Windows ネイティブ前提でフォルダを C 直下に作ってしまったが、WSL 側に移行することでパフォーマンスとパス互換の問題を回避できた
-- WSL 側のホームディレクトリ(`~`)に置くと Windows 側より I/O が大幅に速い
-- VSCode の左下に `WSL: Ubuntu` 表示が出ていれば WSL 接続中という見分け方を学んだ
+- 最初 Windows ネイティブ前提でフォルダを C 直下に作ってしまったが、WSL 側に移行することで I/O 性能と Git 互換の問題を回避
+- VSCode の左下 `WSL: Ubuntu` 表示で接続中を確認する見分け方
+- Git の「コミット作者(user.name / user.email)」と「認証情報(credential)」は別物
+  - user.name を変えても push 権限は変わらない
+  - 認証は SSH 鍵か Personal Access Token で別途設定する必要がある
+- 今回は HTTPS + PAT を URL に埋め込む方式で解決(セキュリティ面で SSH 鍵方式への切り替えは検討課題)
 
 **Java との違いで気づいたこと(あれば)**
 - Composer は Maven / Gradle 相当のパッケージマネージャ
-- PHP は WSL(Linux)上で動かすのが一般的(Windows ネイティブもあるが本番環境とのズレが大きい)
+- PHP は WSL(Linux)上で動かすのが一般的
