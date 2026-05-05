@@ -1,4 +1,4 @@
-# PHP/Laravel エンジニア学習ロードマップ(改訂版 v2.0)
+# PHP/Laravel エンジニア学習ロードマップ(改訂版 v2.1)
 
 ## 学習者プロフィール
 
@@ -37,9 +37,9 @@
 
 ## 学習の運用ルール
 
-1. **学習用ディレクトリ**: `~/learning/phaseX-テーマ/` でPhaseごとに作る
-2. **Git管理**: 学習用フォルダもGitHubにプライベートリポジトリで管理
-3. **学習ログ**: 1日5分、`learning-log.md` に「今日書いたコード」「詰まった点」を記録
+1. **学習用ディレクトリ**: `~/playground/phaseX/` でPhaseごとに作る。各Phase配下に `blockN/` を切り、`problems/`(問題文)、`solutions/`(解答コード)、`solutions/docs/`(解説)、`my_answers/`(自分のコード)を配置
+2. **Git管理**: 学習用フォルダはGitHubにパブリックリポジトリ(`playground`)で管理
+3. **学習ログ**: 日々の学習ログはノートアプリで管理。GitHubには学習コードと教材のみ置き、Phase完了時のサマリーのみGitHubに残す
 4. **継続最優先**: 完璧主義は禁物。1日1Stepでも続けることが最重要
 5. **Phase完了時に進捗を振り返り**、次Phaseの内容を調整
 
@@ -87,11 +87,11 @@
 
 ## 環境準備
 
-- **PHP-W0-S1**: PHP 8.2以上をローカルにインストール(Mac: `brew install php`、Windows: XAMPP)
+- **PHP-W0-S1**: PHP 8.2以上をローカルにインストール(WSL2推奨。`apt install php` または公式PPA)
 - **PHP-W0-S2**: Composerをインストール、`composer --version` で確認
-- **PHP-W0-S3**: VSCodeに「PHP Intelephense」拡張をインストール
-- **PHP-W0-S4**: `~/learning/phase0-writing/` フォルダ作成
-- **PHP-W0-S5**: 学習用GitHubリポジトリ作成、初回プッシュ
+- **PHP-W0-S3**: VSCodeに「PHP Intelephense」拡張をインストール(WSL接続側に)
+- **PHP-W0-S4**: `~/playground/phase0/` フォルダ作成。配下に `block1/problems/`、`block1/solutions/docs/`、`block1/my_answers/` を作る
+- **PHP-W0-S5**: 学習用GitHubリポジトリ(`playground`)を作成、初回プッシュ
 
 ## Block 1: PHPの基本構文を体に染み込ませる
 
@@ -160,13 +160,13 @@
 
 ### インターフェースと抽象クラス(あなたの曖昧ポイント)
 
-- **PHP-B2-S11**: 「**インターフェースとは何か**」をAIに質問して、自分の言葉で `learning-log.md` に書き直す
+- **PHP-B2-S11**: 「**インターフェースとは何か**」をAIに質問して、自分の言葉でノートアプリにメモを書く
 - **PHP-B2-S12**: `Notifiable` インターフェース(`notify(): string` メソッドのみ宣言)(写経→再現)
 - **PHP-B2-S13**: `User implements Notifiable` で `notify()` を実装(写経→再現)
 - **PHP-B2-S14**: 別のクラス `Admin implements Notifiable` で違う実装(自力)
 - **PHP-B2-S15**: 抽象クラス `AbstractAnimal`(`speak()` を抽象メソッドとして宣言)(写経→再現)
 - **PHP-B2-S16**: `Dog extends AbstractAnimal` で `speak()` を実装(自力)
-- **PHP-B2-S17**: 「**インターフェースと抽象クラスの違い**」をコード例とともに `learning-log.md` に書く
+- **PHP-B2-S17**: 「**インターフェースと抽象クラスの違い**」をコード例とともにノートアプリにメモを書く
 
 ### Block 2 完了テスト
 
@@ -184,7 +184,7 @@ Javaで書いたら「こうなる」というコードを、PHPで書いて差�
 - **PHP-B3-S1**: Javaの `ArrayList<String>` 相当のことをPHPの配列でやる(可変長、追加、削除)
 - **PHP-B3-S2**: Javaの `HashMap<String, Integer>` 相当のことをPHPの連想配列でやる
 - **PHP-B3-S3**: Javaの `for-each` ループに対応するPHPの `foreach` をkey付きで書く
-- **PHP-B3-S4**: 配列の操作10個を、Javaなら何を使うか・PHPなら何を使うかの対応表を `learning-log.md` に書く
+- **PHP-B3-S4**: 配列の操作10個を、Javaなら何を使うか・PHPなら何を使うかの対応表をノートアプリにメモを書く
 
 ### 型システムの違い
 
@@ -202,7 +202,7 @@ Javaで書いたら「こうなる」というコードを、PHPで書いて差�
 
 ### Block 3 完了テスト
 
-- **PHP-B3-T1**: 「PHPとJavaの主な違いを10個」を `learning-log.md` に箇条書きで書く
+- **PHP-B3-T1**: 「PHPとJavaの主な違いを10個」をノートアプリに箇条書きでメモを書く
 
 ## Block 4: Composer と PSR-4(モダンPHPの基礎)
 
@@ -420,7 +420,7 @@ Phase 0 で身につけた「書く力」を Laravel の文脈に応用する。
 **使う教材**: 『体系的に学ぶ 安全なWebアプリケーションの作り方 第2版』(徳丸浩)
 
 - **SEC-B1-S1〜S20**: 章ごとに読む、Laravelプロジェクトで攻撃が成立する例 → 防御を実装する練習
-- **SEC-B1-T1**: SQLインジェクション、XSS、CSRFそれぞれを「攻撃が成立するコード」と「Laravelの防御機構」とともに `learning-log.md` に書く
+- **SEC-B1-T1**: SQLインジェクション、XSS、CSRFそれぞれを「攻撃が成立するコード」と「Laravelの防御機構」とともにノートアプリにメモを書く
 - **SEC-B1-T2**: AIに「セキュリティ的に問題のあるLaravelコード」を書かせて、自分で問題点を全て指摘
 
 ---
@@ -485,7 +485,7 @@ Phase 0 で身につけた「書く力」を Laravel の文脈に応用する。
 ## Block 3: もう1つの言語
 
 - **LANG-B1-S1〜S15**: Go か TypeScript で簡単な REST API を書く
-- **LANG-B1-T1**: PHP/Laravel との違いを `learning-log.md` に10個以上書く
+- **LANG-B1-T1**: PHP/Laravel との違いをノートアプリに10個以上メモを書く
 
 ---
 
@@ -503,4 +503,9 @@ Phase 0 で身につけた「書く力」を Laravel の文脈に応用する。
 ## 改訂履歴
 
 - v1.0 (初版): 未経験者向けに作成
-- **v2.0 (本版)**: Java Silver SE17保持者かつ「読めるけど書けない」状態に対応。Phase 0 を新設し、書く力をつけることを最優先に。
+- v2.0: Java Silver SE17保持者かつ「読めるけど書けない」状態に対応。Phase 0 を新設し、書く力をつけることを最優先に。
+- **v2.1 (本版)**: 実運用に合わせて以下を反映:
+  - 学習用ディレクトリを `~/learning/phase0-writing/` から `~/playground/phase0/` に変更
+  - 各Block配下に `problems/` / `solutions/` / `solutions/docs/` / `my_answers/` を設ける教材化フォーマットを採用
+  - 学習ログを `learning-log.md`(GitHub)からノートアプリ管理に移行
+  - 環境準備のインストール手順を WSL2 環境向けに更新
