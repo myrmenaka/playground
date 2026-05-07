@@ -26,9 +26,9 @@ phase0/
 │   ├── solutions/         ← 解答コード + 解説(詰まったら見る)
 │   │   └── docs/          ← 解説Markdown
 │   └── my_answers/        ← 自分が書いたコード
-├── block2/                ← Block 2: クラス(予定)
-├── block3/                ← Block 3: PHPとJavaの差分(予定)
-└── block4/                ← Block 4: Composer / PSR-4(予定)
+├── block2/                ← Block 2: クラス
+├── block3/                ← Block 3: PHPとJavaの差分
+└── block4/                ← Block 4: Composer / PSR-4
 ```
 
 ## 進め方
