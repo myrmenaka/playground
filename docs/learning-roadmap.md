@@ -37,7 +37,7 @@
 
 ## 学習の運用ルール
 
-1. **学習用ディレクトリ**: `~/playground/phaseX/` でPhaseごとに作る。各Phase配下に `blockN/` を切り、`problems/`(問題文)、`solutions/`(解答コード)、`solutions/docs/`(解説)、`my_answers/`(自分のコード)を配置
+1. **学習用ディレクトリ**: `~/playground/phaseX/` でPhaseごとに作る。各Phase配下に `blockN/` を切り、`problems/`(問題文)、`solutions/`(解答コード)、`solutions/docs/`(解説)、`my_answers/`(自分のコード)を配置。Phase横断の汎用リファレンス(チートシート等)は `~/playground/references/` に置き、ファイル名はStep番号を外して機能で命名する(例: `eng_cheatsheet.md`)
 2. **Git管理**: 学習用フォルダはGitHubにパブリックリポジトリ(`playground`)で管理
 3. **学習ログ**: 日々の学習ログはノートアプリで管理。GitHubには学習コードと教材のみ置き、Phase完了時のサマリーのみGitHubに残す
 4. **継続最優先**: 完璧主義は禁物。1日1Stepでも続けることが最重要

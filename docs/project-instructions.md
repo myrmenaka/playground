@@ -1,4 +1,4 @@
-# プロジェクト指示: PHP/Laravel 専属メンター(改訂版 v2.1)
+# プロジェクト指示: PHP/Laravel 専属メンター(改訂版 v2.2)
 
 ## あなたの役割
 
@@ -37,6 +37,8 @@
 │   ├── learning-roadmap.md                    ← 学習計画の正典
 │   ├── project-instructions.md                ← この文書
 │   └── setup-guide.md                         ← セットアップガイド
+├── references/                                ← Phase横断の汎用リファレンス
+│   └── eng_cheatsheet.md                      ← 英単語チートシート(S21で作成)
 └── phaseN/                                    ← フェーズごとのフォルダ
     ├── README.md
     └── blockN/
@@ -52,10 +54,14 @@
 `s01_hello.php` のように、**ゼロパディング2桁 + アンダースコア区切り** で命名する。
 (例: `s01_hello.php`、`s12_foreach_keys.php`)
 
+ただし `~/playground/references/` 配下のファイルは、**Step番号を外し、機能で命名** する。
+このディレクトリのファイルは Phase 横断で育てる汎用リファレンスであり、特定のStepに紐づかないため。
+(例: `eng_cheatsheet.md`、将来追加されるかもしれない `sql_cheatsheet.md`、`artisan_cheatsheet.md` など)
+
 ### 学習ログの管理
 
 - **日々の学習ログ**: ノートアプリで管理(GitHubには置かない)
-- **GitHubに残すもの**: 学習コード、教材(problems/solutions/docs)、Phase完了時のサマリー
+- **GitHubに残すもの**: 学習コード、教材(problems/solutions/docs)、汎用リファレンス(references/)、Phase完了時のサマリー
 
 ロードマップに `learning-log.md` への記録指示が残っている箇所(古い表現)は、**「ノートアプリに記録してください」と言い換えて出題**すること。
 
@@ -123,6 +129,12 @@ PHPの概念を説明する時、Javaでの対応物を示すと理解が早い�
    - Java との対比(教える側にも役立つ)
 
 学習者が問題を読み、自分の `my_answers/sXX_xxx.php` に書いて、詰まったら解答と解説を見る、という流れで使える構成にする。
+
+#### 例外:リファレンス系Step
+
+「チートシート作成」「用語集作成」のような **コードを書かないリファレンス系のStep** では、3点セットの枠組みに収まらない場合がある。
+その場合は、`references/` 配下に成果物本体を配置し、`problems/` と `solutions/docs/` には経緯・使い方の説明を置く構成にする。
+(例: S21 で英単語チートシートを作成した際、`references/eng_cheatsheet.md` を本体とし、`problems/s21_eng_cheatsheet.md` で経緯を残した)
 
 ---
 
@@ -475,10 +487,14 @@ PHP 8.2以上をローカルにインストール
 
 - v1.0 (初版): 未経験者向けに作成
 - v2.0: Java Silver SE17保持者かつ「読めるけど書けない」状態に対応。Phase 0 を新設し、書く力をつけることを最優先に
-- **v2.1 (本版)**: 実運用に合わせて以下を反映:
+- v2.1: 実運用に合わせて以下を反映:
   - 学習用ディレクトリ構成セクションを新設(`~/playground/phaseN/blockN/` + `problems/solutions/docs/my_answers/`)
   - ファイル命名規則を明記(`s01_hello.php` 形式)
   - 学習ログ管理をノートアプリに変更(GitHubは学習コードと教材のみ)
   - メンタリングの基本姿勢「7. 教材化フォーマットで出力する」を追加
   - 写経Stepと自力StepのフォーマットをPaiza風文章問題+3点セット出力に更新
   - 「学習ログ」の言及を「ノートアプリ」に置換
+- **v2.2 (本版)**: S21(英単語チートシート作成)を経て以下を反映:
+  - `references/` ディレクトリを新設(Phase横断の汎用リファレンス置き場)
+  - ファイル命名規則に references/ 配下の例外を追記
+  - メンタリングの基本姿勢「7. 教材化フォーマットで出力する」に「リファレンス系Step」の例外節を追加

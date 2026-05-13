@@ -15,6 +15,35 @@ PHP の基本構文・クラス・モダンPHP(Composer/PSR-4)を、**写経 →
 4. インターフェースと抽象クラスの違いを、コードで示しながら説明できる
 5. PHP と Java の主要な差分を10個以上挙げられる
 
+## 環境準備
+
+| Step | 内容 |
+|------|------|
+| W0-S1 | PHP 8.2以上をローカルにインストール(WSL2) |
+| W0-S2 | Composer をインストール |
+| W0-S3 | VSCode に PHP Intelephense 拡張をインストール |
+| W0-S4 | `~/playground/phase0/` フォルダ作成 |
+| W0-S5 | 学習用 GitHub リポジトリ(`playground`)を作成、初回プッシュ |
+
+## Block 一覧
+
+| Block | テーマ | 完了テスト |
+|-------|------|---------|
+| Block 1 | PHP の基本構文を体に染み込ませる | B1-T1、B1-T2 |
+| Block 2 | クラスを書けるようになる | B2-T1、B2-T2 |
+| Block 3 | PHP と Java の差分を体感する | B3-T1 |
+| Block 4 | Composer と PSR-4(モダンPHPの基礎) | B4-T1 |
+
+各 Block の詳細は、各 Block の `README.md` を参照。
+
+## Phase 0 修了テスト
+
+| Test | 内容 |
+|------|------|
+| PHP-FINAL-T1 | ユーザー管理システム(User クラス + UserRepository クラス) |
+
+各Block完了テストと修了テストに合格すれば Phase 1 へ。
+
 ## ディレクトリ構成
 
 ```
@@ -30,6 +59,8 @@ phase0/
 ├── block3/                ← Block 3: PHPとJavaの差分
 └── block4/                ← Block 4: Composer / PSR-4
 ```
+
+なお、Phase 横断の汎用リファレンス(チートシート等)は `~/playground/references/` に置く。
 
 ## 進め方
 
@@ -66,6 +97,7 @@ php blockX/my_answers/sXX_xxx.php
 | 写経Step | 解答を見ながら書く → 閉じて再現 → 動かす |
 | 自力Step | 問題文だけ見て自力で書く → 詰まったら解答を見る → 再度自力で書く |
 | ドキュメント読みStep | 指定された公式ドキュメントを時間内に読む(理解より把握優先) |
+| 概念Step | AI に質問してノートアプリに自分の言葉で整理する |
 
 ## 学習の運用ルール
 
@@ -73,6 +105,7 @@ php blockX/my_answers/sXX_xxx.php
 2. **小さく書く**: 毎日少しでも手を動かす
 3. **詰まってOK**: 詰まったら解答を見て、その後再度自力で書く
 4. **Block完了テスト**: 各Blockの最後にテストがある。詰まったらそのBlockを繰り返す
+5. **リファレンスを育てる**: 学習中に出会った汎用知識は `~/playground/references/` に蓄積する
 
 ## 期間の目安
 
