@@ -13,7 +13,8 @@ PHP の基本構文・クラス・モダンPHP(Composer/PSR-4)を、**写経 →
 2. 簡単なクラスを何も見ずに書ける(プロパティ・コンストラクタ・メソッド)
 3. 与えられた要件(20〜30行程度)を、ヒントなしでコードに落とせる
 4. インターフェースと抽象クラスの違いを、コードで示しながら説明できる
-5. PHP と Java の主要な差分を10個以上挙げられる
+5. PHP独自の重要要素(`==`/`===`、nullable、`strict_types`、リクエストモデル、スーパーグローバル、Enum)を理解し、Laravel 学習の準備ができている
+6. Composer と PSR-4 を使ったモダンPHPプロジェクトをゼロから構築できる
 
 ## 環境準備
 
@@ -31,7 +32,7 @@ PHP の基本構文・クラス・モダンPHP(Composer/PSR-4)を、**写経 →
 |-------|------|---------|
 | Block 1 | PHP の基本構文を体に染み込ませる | B1-T1、B1-T2 |
 | Block 2 | クラスを書けるようになる | B2-T1、B2-T2 |
-| Block 3 | PHP と Java の差分を体感する | B3-T1 |
+| Block 3 | PHP独自の重要要素 | B3-T1 |
 | Block 4 | Composer と PSR-4(モダンPHPの基礎) | B4-T1 |
 
 各 Block の詳細は、各 Block の `README.md` を参照。
@@ -56,7 +57,7 @@ phase0/
 │   │   └── docs/          ← 解説Markdown
 │   └── my_answers/        ← 自分が書いたコード
 ├── block2/                ← Block 2: クラス
-├── block3/                ← Block 3: PHPとJavaの差分
+├── block3/                ← Block 3: PHP独自の重要要素
 └── block4/                ← Block 4: Composer / PSR-4
 ```
 
