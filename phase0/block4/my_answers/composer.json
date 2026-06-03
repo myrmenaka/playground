@@ -9,5 +9,7 @@
             "email": "12345678+myrmenaka@users.noreply.github.com"
         }
     ],
-    "require": {}
+    "require": {
+        "monolog/monolog": "^3.10"
+    }
 }
