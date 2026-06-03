@@ -1,4 +1,4 @@
-# PHP/Laravel エンジニア学習ロードマップ(改訂版 v2.2)
+# PHP/Laravel エンジニア学習ロードマップ(改訂版 v2.3)
 
 ## 学習者プロフィール
 
@@ -186,6 +186,8 @@
 
 PHP/Laravel 業務で **頻繁に出会う、または知らないと詰まる** PHP 独自の概念を、Block 2 までの「書く力」を使って体に入れる。
 Java と PHP の網羅的な比較は行わない。代わりに **「Laravel に入る前に押さえておくと、Phase 1 が大幅にラクになる」要素** に絞る。
+
+> なお、解説における Java 対比はメンタリング方針として廃止済み(project-instructions v2.3)。Java との比較が必要なときは学習者が「質問」で個別に聞く運用とする。
 
 ### このBlockのゴール
 
@@ -553,7 +555,7 @@ Phase 0 で身につけた「書く力」を Laravel の文脈に応用する。
   - 各Block配下に `problems/` / `solutions/` / `solutions/docs/` / `my_answers/` を設ける教材化フォーマットを採用
   - 学習ログを `learning-log.md`(GitHub)からノートアプリ管理に移行
   - 環境準備のインストール手順を WSL2 環境向けに更新
-- **v2.2 (本版)**: Block 2 実施を踏まえて以下を反映:
+- v2.2: Block 2 実施を踏まえて以下を反映:
   - Phase 0 - Block 2 に例外処理Step(S18・S19)と分解手順Step(S20)を追加
   - Phase 0 - Block 3 を「PHPとJavaの差分を体感する」(12Step)から「PHP独自の重要要素」(6Step)に縮小再設計
     - Java を業務で使う予定がないため、Java との網羅的比較は不要と判断
@@ -561,3 +563,5 @@ Phase 0 で身につけた「書く力」を Laravel の文脈に応用する。
   - Phase 0 のゴール 5 を「PHPとJavaの差分10個」から「PHP独自の重要要素を理解」に変更
   - Phase 0 のゴールに 6(Composer と PSR-4)を追加
   - 学習の運用ルール 1 に `~/playground/references/` の説明を追加
+- **v2.3 (本版)**: project-instructions v2.3 への追従:
+  - Block 3 冒頭に、Java 対比はメンタリング方針として廃止済みである旨の補足を追加(学習内容・順序の変更はなし)
