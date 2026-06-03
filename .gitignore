@@ -1,0 +1,10 @@
+# composer
+vendor/
+
+# 環境設定
+.env
+
+# OS
+.DS_Store
+.idea/
+*.log
