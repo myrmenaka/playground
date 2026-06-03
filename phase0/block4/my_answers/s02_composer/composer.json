@@ -1,0 +1,13 @@
+{
+    "name": "myrmenaka/composer-practice",
+    "description": "Composer init practice",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "myrmenaka",
+            "email": "12345678+myrmenaka@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
